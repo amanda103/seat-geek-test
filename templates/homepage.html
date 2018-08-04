@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+
+  <div class="container">
+    <h1>
+    </h1>
+    {% for show in relevent_shows.values() %}
+      <h1>{{show['title']}}</h1>
+      <h1>{{show['city']}}{{show['state']}}</h1>
+      <a href="{{show['url']}}"></a>
+      {% for performers in show['performers']%}
+      <h1>{{performers['name']}}</h1>
+      <img src="{{performers['image']}}">
+    {% endfor %}
+    {% endfor %}
+
+  </div>
+
+  <footer>C Amanda Cameron</footer>
+
+</body>
+</html>
